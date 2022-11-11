@@ -1,0 +1,69 @@
+@startuml tables
+entity race as "race\nレース情報"{
+    + race_id [PK]
+    --
+    race_name
+    turn
+    weather
+    course_len
+    course_type
+    ground_state
+    race_class
+    venue
+    nth_time
+    nth_day
+    nth_race
+}
+
+entity race_card as "race_card\n出馬表" {
+    + race_id [PK]
+    + horse_id [PK]
+    --
+    jockey_id
+    jockey_name
+    popular
+    bracket_number
+    horse_number
+    weight_carry
+    age
+    weight_horse
+    diff_weight_horse
+}
+
+entity result as "result\nレース結果" {
+    + race_id [PK]
+    + horse_id [PK]
+    --
+    order
+    odds
+    last3F
+    time_idx
+    passing
+    remark
+    diff_time
+    prize
+    date
+    ground_state_idx
+}
+
+entity horse_profile as "horse_profile\n馬のプロフィール"{
+    + horse_id [PK]
+    --
+    horse_name
+    breeder_id
+    breeder_name
+    owner_id
+    owner_name
+    trainer_id
+    trainer_name
+    near_relation_horses_id_0
+    near_relation_horses_id_1
+    near_relation_horses_name_0
+    near_relation_horses_name_1
+    sex
+    birthday
+    father_id
+    father_name
+    mother_id
+    mother_name
+}

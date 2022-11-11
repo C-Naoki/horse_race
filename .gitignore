@@ -1,0 +1,11 @@
+__pycache__/
+~$*
+
+.python-version
+.env
+
+results/
+sqlpad/
+
+lambda_test.py
+memo.ipynb

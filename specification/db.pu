@@ -1,0 +1,6 @@
+@startuml erd
+!include tables.pu
+race_card -- result
+race_card -|{ horse_profile
+race_card --|{ race
+@enduml
